@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pymysql
+sqlalchemy
+redis
+pydantic
+python-dotenv
+langchain
+langchain-openai
+chromadb
+sentence-transformers

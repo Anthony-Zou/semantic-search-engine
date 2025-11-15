@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+.Python
+.ipynb_checkpoints/
+.env
+data/*
+!data/.gitkeep
+*.sql
+*.sqlite
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+*.env
+
+# Data
+data/*
+!data/.gitkeep
+
+# Database
+*.sql
+*.sqlite
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
