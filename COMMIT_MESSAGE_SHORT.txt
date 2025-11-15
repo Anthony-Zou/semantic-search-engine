@@ -1,0 +1,11 @@
+feat: Add Kafka integration for async document processing
+
+- Add Kafka, Zookeeper, and Kafka UI to docker-compose
+- Implement async document processing via message queue
+- Add embedding worker consumer for background processing
+- Fix MySQL SSL connection issue (ssl_disabled=True)
+- Fix Kafka health check using KafkaAdminClient
+- Add comprehensive Kafka documentation and examples
+
+Breaking Changes: None
+

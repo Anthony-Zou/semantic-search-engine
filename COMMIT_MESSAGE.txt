@@ -1,0 +1,47 @@
+feat: Add Apache Kafka integration for async document processing
+
+This commit adds comprehensive Kafka integration to enable asynchronous
+document processing, improving API response times and system scalability.
+
+Major Changes:
+- Add Kafka, Zookeeper, and Kafka UI services to docker-compose.yml
+- Implement async document processing via Kafka message queue
+- Add embedding worker consumer for background processing
+- Fix MySQL connection SSL issue (ssl_disabled=True)
+- Fix Kafka health check using KafkaAdminClient
+- Add search analytics via Kafka events
+
+New Features:
+- Async document processing mode (POST /documents?async_mode=true)
+- Kafka-based message queue for document embeddings
+- Background worker for processing queued documents
+- Search analytics tracking via Kafka
+- Comprehensive health check endpoint with Kafka status
+
+Infrastructure:
+- Kafka 7.4.0 with Zookeeper (not KRaft mode)
+- Kafka UI for monitoring and debugging
+- Embedding worker service for async processing
+- Health checks for all services
+
+Documentation:
+- KAFKA_GUIDE.md: Complete Kafka learning guide
+- KAFKA_INTEGRATION.md: Integration instructions and troubleshooting
+- TECHNICAL_GUIDE.md: Updated with Kafka integration details
+- Example scripts for producer/consumer patterns
+
+Bug Fixes:
+- MySQL connection: Add ssl_disabled=True for Docker environment
+- Kafka health check: Use KafkaAdminClient instead of producer.list_topics()
+- Improved error messages in health check endpoint
+
+Files Changed:
+- backend/main.py: Add Kafka producer, async mode, search analytics
+- backend/worker.py: New async embedding worker (Kafka consumer)
+- backend/requirements.txt: Add kafka-python dependency
+- docker-compose.yml: Add Kafka, Zookeeper, Kafka UI, embedding worker
+- backend/examples/: Producer/consumer example scripts
+
+Breaking Changes: None
+Migration: Existing sync mode still works by default
+
